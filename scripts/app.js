@@ -4,17 +4,20 @@ window.onload = function() {
 
 
 
-/*==============CommentBox==============*/
+/*==============CommentBox -  this comment section is for people not attending==============*/
 
 
 var commentsBox = {
-	comments: ["comment1", "comment2", "comment3"],
+	comments: [],
 	
 	displayComments: function() {
 		console.log(this.comments)
 	},
 	addComments: function(newComment) {
-		this.comments.push(newComment);
+		this.comments.push({
+			newComment: newComment,
+			attending: false
+		});
 		this.displayComments();
 	},
 	changeComments: function(indexValue, newComment) {
