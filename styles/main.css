@@ -9,6 +9,42 @@ html {
 	color: #666;
 }
 
+/*========================*/
+/*=======NAVIGATION========*/
+/*========================*/
+.main-nav {
+	float: right;
+	list-style: none;
+	padding-right: 10px;
+}
+
+.main-nav li {
+	display: inline-block;
+	padding: 5px 10px;
+	margin-left: 20px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+	padding:  8px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+	font-size: 90%;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 2s;
+
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+	border-bottom: 2px solid #ccc;
+}
+
+
+/*========================*/
+/*========PARALAX=========*/
+/*========================*/
 .pimag1,
 .pimag2,
 .pimag3 {
@@ -21,7 +57,7 @@ html {
 }
 
 .pimag1 {
-	background-image: url(other_images/kate-and-tom1.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(other_images/kate-and-tom1.jpg);
 	height: 100vh;
 }
 
@@ -48,4 +84,39 @@ html {
 .section-dark {
 	background-color: #282e34
 	color: #ddd;	
+}
+
+.ptext {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: black;
+	font-size: 27px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+}
+
+.ptext .border {
+	background-color: #111;
+	background-color: rgba(0,0,0,.7);
+	color: white;
+	padding: 20px;
+}
+
+
+.ptext .border.trans {
+	background-color: transparent;
+}
+
+/*========================*/
+/*=====MEDIA QUERIES=======*/
+/*========================*/
+
+@media(max-width: 568px) {
+	.pimag1,
+	.pimag2,
+	.pimag3 {
+		background-attachment: scroll;
+	}
 }
