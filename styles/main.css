@@ -9,6 +9,14 @@ html {
 	color: #666;
 }
 
+.clearfix {zoom: 1}
+.clearfix:after {
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
 /*========================*/
 /*=======NAVIGATION========*/
 /*========================*/
@@ -16,12 +24,14 @@ html {
 	float: right;
 	list-style: none;
 	padding-right: 10px;
+
 }
 
 .main-nav li {
 	display: inline-block;
 	padding: 5px 10px;
 	margin-left: 20px;
+	//position: fixed;
 }
 
 .main-nav li a:link,
@@ -41,6 +51,86 @@ html {
 	border-bottom: 2px solid #ccc;
 }
 
+/*========================*/
+/*========OUR STORY=========*/
+/*========================*/
+.ourstorybox {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 200px;
+	//background-color: yellow;
+}
+
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	line-height: 145%;
+	position: relative;
+	margin-top: 40px;
+}
+
+ blockquote:before {
+ 	content:"\201C";
+ 	font-size: 500%;
+ 	display: block;
+ 	position: absolute;
+ 	top: -3px;
+ 	left: -3px;
+ }
+
+
+cite {
+	font-size: 90%;
+	margin-top: 25px;
+	display: block;
+}
+
+cite img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	//margin-right: 5px;
+ 	//vertical-align: middle;
+}
+
+/*========================*/
+/*=====WEDDING PARTY=======*/
+/*========================*/
+.wedding-party {
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	height: auto;
+}
+
+.wedding-party li {
+	display: block;
+	float: left;
+	width: 25%;
+}
+
+.party-photo {
+	width: 100%;
+	margin: 0;
+	// padding: 0;
+	overflow: hidden;
+	//background-color: #000;
+}
+
+.party-photo img {
+	opacity: 0.7;
+	width: 100%;
+	height: 100%;
+	transform: scale(1.15);
+	transition: transform 0.5s opacity 0.5s;
+}
+
+.party-photo img:hover {
+	opacity: 1;
+	transform: scale(1.03);
+}
+
 
 /*========================*/
 /*========PARALAX=========*/
@@ -56,18 +146,20 @@ html {
 	background-attachment: fixed;
 }
 
-.pimag1 {
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(other_images/kate-and-tom1.jpg);
+.pimag1 {	
+	background-image: url(other_images/bride-and-groom.jpg);
 	height: 100vh;
 }
 
 .pimag2 {
-	background-image: url(other_images/kate-and-tom12.jpg);
+	
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(other_images/kate-and-tom1.jpg);
 	height: 50vh;
 }
 
 .pimag3 {
 	background-image: url(other_images/bride-and-groom.jpg);
+	background-image: linear-gradient(rgba(2,0,0,0.7), rgba(0,5,0,0.7)), url(other_images/kate-and-tom3.jpg);
 	height: 50vh;
 }	
 
@@ -78,12 +170,14 @@ html {
 
 .section-light {
 	background-color: #f4f4f4;
+	background-color: lightgrey;
 	color: #666;
 }
 
 .section-dark {
-	background-color: #282e34
-	color: #ddd;	
+	background-color: #282e34;
+	background-color: lightgrey;
+	color: black;	
 }
 
 .ptext {
