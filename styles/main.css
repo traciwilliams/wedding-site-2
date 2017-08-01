@@ -209,6 +209,35 @@ cite img {
 .ptext .border.trans {
 	background-color: transparent;
 }
+/*========================*/
+/*=====RSVP FORM=======*/
+/*========================*/
+
+input[type=text],
+input[type=email] {
+	width: 20%;
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+input[type=submit] {
+	width: 10%;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
 
 /*========================*/
 /*=====MEDIA QUERIES=======*/
